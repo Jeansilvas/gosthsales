@@ -1,11 +1,26 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [usuario, setUsuario] = useState('')
+  const [senha, setSenha] = useState('')
+  const [mostrarSenha, setMostrarSenha] = useState(false)
+  const [lembrar, setLembrar] = useState(true)
+  const [carregando, setCarregando] = useState(false)
+
+  function handleLogin(e) {
+    e.preventDefault()
+    if (!usuario || !senha) {
+      alert('Preencha usuário e senha!')
+      return
+    }
+    setCarregando(true)
+    // Simula chamada à API — troque pelo seu fetch/axios
+    setTimeout(() => {
+      setCarregando(false)
+      alert(`Bem-vindo, ${usuario}!`)
+    }, 1200)
+  }
 
   return (
     <div className="login-page">
@@ -13,13 +28,12 @@ function App() {
       <div className="login-hero">
         <div className="hero-overlay" />
         <div className="hero-content">
-          <div className="logo">✦ MinhaMarca</div>
+          <div className="logo">✦ Gosth-Sales</div>
           <h1>
-            Bem-vindo de volta<span>.</span>
+            Bem-vindo!<span>.</span>
           </h1>
           <p>
-            Acesse sua conta para gerenciar projetos, acompanhar resultados e
-            continuar de onde parou.
+            Acesse sua conta para gerenciar estoque, clientes, vendas e acompanhar resultados.
           </p>
           <div className="hero-stats">
             <div>

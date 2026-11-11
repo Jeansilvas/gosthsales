@@ -16,7 +16,7 @@
   flex: 1.2;
   position: relative;
   /* 👇 TROQUE PELA SUA FOTO: pode ser /foto.jpg da pasta public */
-  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80');
+  background-image: url('https://drive.google.com/file/d/10a4pNUuw3E4piPoGElbXSzaPea79Ygvi/view?usp=drive_link');
   background-size: cover;
   background-position: center;
   display: flex;
